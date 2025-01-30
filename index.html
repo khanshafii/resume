@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shafique Khan - Cyberpunk CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', monospace;
+        }
+
+        body {
+            background: #0a0a0f;
+            color: #e0e0e0;
+            line-height: 1.4;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            max-width: 1000px;
+            margin: 20px auto;
+            min-height: 95vh;
+            background: #13131a;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            animation: scanline 2s linear infinite;
+        }
+
+        @keyframes scanline {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .left-column {
+            background: #0d0d12;
+            padding: 30px;
+            position: relative;
+            border-right: 1px solid #00ffff;
+        }
+
+        .right-column {
+            padding: 30px;
+            position: relative;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .contact-info {
+            color: #a0a0a0;
+            font-size: 0.9em;
+            line-height: 1.8;
+            padding: 15px;
+            background: rgba(0, 255, 255, 0.05);
+            border-left: 2px solid #00ffff;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #ff00ff;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ff00ff;
+            text-shadow: 0 0 8px rgba(255, 0, 255, 0.3);
+        }
+
+        .summary {
+            color: #c0c0c0;
+            padding: 15px;
+            background: rgba(255, 0, 255, 0.05);
+            border-left: 2px solid #ff00ff;
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(0, 255, 255, 0.03);
+            border-left: 2px solid #00ffff;
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover, .experience-item:hover {
+            background: rgba(0, 255, 255, 0.05);
+            transform: translateX(5px);
+        }
+
+        .education-item h3, .experience-item h3 {
+            color: #00ffff;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            padding: 8px;
+            background: rgba(255, 0, 255, 0.03);
+            border-left: 2px solid #ff00ff;
+            transition: all 0.3s ease;
+        }
+
+        .skills-list li:hover {
+            background: rgba(255, 0, 255, 0.05);
+            transform: translateX(5px);
+        }
+
+        .languages {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            padding: 8px 15px;
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid #00ffff;
+            color: #00ffff;
+            transition: all 0.3s ease;
+        }
+
+        .language-item:hover {
+            background: rgba(0, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #a0a0a0;
+        }
+
+        .profile-tag {
+            font-family: monospace;
+            color: #00ffff;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .glitch-text {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <header>
+                <div class="profile-tag">> INIT_PROFILE_DATA</div>
+                <h1 class="glitch-text">SHAFIQUE KHAN</h1>
+                <div class="contact-info">
+                    > +91 6394728183<br>
+                    > khanshafique692@gmail.com<br>
+                    > LOCATION: DELHI
+                </div>
+            </header>
+
+            <section>
+                <h2>>_SKILLS</h2>
+                <div class="skills-category">
+                    <ul class="skills-list">
+                        <li>Microsoft Excel</li>
+                        <li>PowerPoint</li>
+                        <li>Content Management</li>
+                        <li>Research & Documentation</li>
+                        <li>Creative Writing</li>
+                        <li>Storytelling</li>
+                        <li>Critical Thinking</li>
+                        <li>Team Collaboration</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>>_LANGUAGES</h2>
+                <div class="languages">
+                    <div class="language-item">ENG_PRO</div>
+                    <div class="language-item">HINDI_NAT</div>
+                    <div class="language-item">URDU_NAT</div>
+                </div>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section>
+                <h2>>_SYSTEM_OVERVIEW</h2>
+                <p class="summary">
+                    Creative content professional specializing in script writing and research. Combining humanities background with storytelling skills to deliver compelling content. Multilingual professional with proven success in freelance writing and research.
+                </p>
+            </section>
+
+            <section>
+                <h2>>_EDUCATION</h2>
+                <div class="education-item">
+                    <h3>[ Shyam Lal College, Delhi University ]</h3>
+                    <p>BA (Honours) - Current_Status: ENROLLED</p>
+                </div>
+                <div class="education-item">
+                    <h3>[ Seth M.R. JAIPURIA School, Banaras ]</h3>
+                    <p>12th Grade (Humanities) - Status: COMPLETED</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>>_EXPERIENCE</h2>
+                <div class="experience-item">
+                    <h3>[ Freelance Script Writer & Researcher | Upwork ]</h3>
+                    <ul>
+                        <li>> Create engaging YouTube scripts</li>
+                        <li>> Execute thorough research protocols</li>
+                        <li>> Manage multiple project streams</li>
+                        <li>> Optimize content for engagement metrics</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
